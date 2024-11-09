@@ -1,0 +1,21 @@
+<h1>DBZ Personajes</h1>
+<hr/>
+
+<div class="row">
+
+  <div class="col">
+    <!-- Aqui le pasa un valor a un componente hijo -->
+    <!-- Tambien recibe un emit de un componente hijo -->
+    <dbz-list
+      [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
+    >
+    </dbz-list>
+  </div>
+
+  <div class="col">
+    <!-- Aqui recibe un evento emisor de un componente hijo -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
+  </div>
+
+</div>
